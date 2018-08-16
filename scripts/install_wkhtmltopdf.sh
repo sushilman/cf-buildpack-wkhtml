@@ -14,7 +14,6 @@ WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
 
 BIN_DIR=$(cd $(dirname $0); pwd)
-FONTS_DIR=$(cd "$BIN_DIR/../fonts"; pwd)
 
 if [ -f $WKHTMLTOPDF_PKG ]; then
   echo "-----> Using wkhtmltopdf Debian package from cache"
