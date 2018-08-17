@@ -8,7 +8,7 @@ BIN_PATH="$BUILD_DIR/bin"
 TMP_PATH="$BUILD_DIR/tmp"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 
-WKHTMLTOPDF_URL="https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.trusty_amd64.deb"
+WKHTMLTOPDF_LOCATION="../resources/wkhtmltox_0.12.5-1.trusty_amd64.deb"
 WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
@@ -18,8 +18,8 @@ BIN_DIR=$(cd $(dirname $0); pwd)
 if [ -f $WKHTMLTOPDF_PKG ]; then
   echo "-----> Using wkhtmltopdf Debian package from cache"
 else
-  echo "-----> Downloading wkhtmltopdf Debian package"
-  curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_PKG
+  echo "-----> Copying wkhtmltopdf Debian package"
+  cp $WKHTMLTOPDF_LOCATION $WKHTMLTOPDF_PKG
 fi
 
 echo "-----> Unpacking Debian package"
