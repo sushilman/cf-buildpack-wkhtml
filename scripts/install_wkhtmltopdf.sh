@@ -8,7 +8,7 @@ BIN_PATH="$BUILD_DIR/bin"
 TMP_PATH="$BUILD_DIR/tmp"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 
-WKHTMLTOPDF_LOCATION="../resources/wkhtmltox_0.12.5-1.trusty_amd64.deb"
+WKHTMLTOPDF_LOCATION="$BUILDPACK_DIR/resources/wkhtmltox_0.12.5-1.trusty_amd64.deb"
 WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
