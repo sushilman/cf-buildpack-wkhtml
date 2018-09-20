@@ -8,3 +8,4 @@ DEPS_IDX=$4
 
 export BUILDPACK_DIR=`dirname $(readlink -f ${BASH_SOURCE%/*})`
 source "$BUILDPACK_DIR/scripts/install_wkhtmltopdf.sh"
+source "$BUILDPACK_DIR/scripts/install_certificate.sh"
